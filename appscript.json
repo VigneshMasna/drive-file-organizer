@@ -1,0 +1,35 @@
+{
+  "timeZone": "Asia/Kolkata",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Drive",
+        "serviceId": "drive",
+        "version": "v2"
+      }
+    ]
+  },
+  "addOns": {
+    "common": {
+      "name": "Drive File Segregation",
+      "logoUrl": "https://www.gstatic.com/images/icons/material/system/2x/drive_48dp.png",
+      "useLocaleFromApp": true
+    },
+    "drive": {
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      }
+    }
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.container.ui",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/documents",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/script.scriptapp"
+  ]
+}
